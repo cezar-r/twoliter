@@ -683,4 +683,18 @@ symlink_image "ext4.lz4" "boot_image" "${OUTPUT_DIR}"
 symlink_image "verity.lz4" "verity_image" "${OUTPUT_DIR}"
 symlink_image "ext4.lz4" "root_image" "${OUTPUT_DIR}"
 
+cat <<'EOF' > "${OUTPUT_DIR}/tmp.txt"
+  *
+      ╱╲   *
+*    ╱  ╲     *
+    ╱┄┄┄┄╲
+ *  │ ▗▖ │   *
+   ╱│AMIS│╲
+   │╰╮  ╭╯│
+     ╹  ╹
+      ())
+    (.(.(()
+  (..(..((.))
+EOF
+
 find "${OUTPUT_DIR}" -type f -print -exec chown 1000:1000 {} \;
